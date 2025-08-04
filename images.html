@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image Gallery</h1>
+<input type="file" id="imageUpload" accept="image/*" multiple>
+
+  
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('architecture')">Architecture</button>
+  </div>
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1015/300/200" class="gallery-item nature" alt="Nature">
+    <img src="https://picsum.photos/id/1016/300/200" class="gallery-item architecture" alt="Architecture">
+    <img src="https://picsum.photos/id/1018/300/200" class="gallery-item nature" alt="Nature">
+    <img src="https://picsum.photos/id/1025/300/200" class="gallery-item architecture" alt="Architecture">
+    <img src="https://picsum.photos/id/1029/300/200" class="gallery-item nature" alt="Nature">
+    <img src="https://picsum.photos/id/1031/300/200" class="gallery-item architecture" alt="Architecture">
+  </div>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
+
